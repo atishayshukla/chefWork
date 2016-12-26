@@ -17,3 +17,14 @@ Initialize the git repo in the folder.
 Add .chef to gitignore using echo ".chef" >> .gitignore
 Commit all the changes.
 ------------------------------------------------------------
+
+Issues faced while the setup:
+------------------------------------------------------------
+By default powershell was adding few unknown characters to .gitignore.
+To make it work first remove all the git cache and re add everything.
+You can also edit your repo on github and make a pull to remove unnecassry characters from the file.
+
+Commit all pending changes, then run this command:
+git rm -r --cached .
+git add .
+git commit -m ".gitignore is now working"
