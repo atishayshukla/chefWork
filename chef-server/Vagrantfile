@@ -37,7 +37,7 @@ while (curl http://localhost:8000/_status) | grep "fail"; do sleep 15s; done
 # create admin user
 echo "Creating a user and organization..."
 sudo chef-server-ctl user-create admin Atishay Admin atishayshukla@gmail.com insecurepassword --filename admin.pem
-sudo chef-server-ctl org-create atishayShukla "Atishay Shukla, Inc." --association_user admin --filename atishayshukla-validator.pem
+sudo chef-server-ctl org-create atishay "Atishay Shukla, Inc." --association_user admin --filename atishay-validator.pem
 
 # copy admin RSA private key to share
 echo "Copying admin key to /vagrant/secrets..."
